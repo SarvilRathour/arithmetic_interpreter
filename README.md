@@ -15,6 +15,13 @@ In my case token can have two things:-
 ```bash
 typedef struct {
   int type;
-  char value;
+  char operator_value;
+  int number_value
 }Token;
 ```
+*type*- Type in token will be value 0 or 1. 
+  1. 0 represent an Integer
+  2. 1 represent an Character
+
+![Screenshot](images/unnamed.png)
+

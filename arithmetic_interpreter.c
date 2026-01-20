@@ -14,7 +14,11 @@ Token current_token;//global variable with no initialisation
 bool is_digit(char c){
   return c>='0'&& c<='9';
 }
+bool is_operator(char c){
+  return c=='+' || c=='-';
+}
 void parse(int type){
+  
     if(current_token.type!=type){
       printf("Exected a different value");
       exit(-1);
@@ -25,10 +29,13 @@ void identifying_type(char raw_token){
     current_token.type=INTEGER;
     current_token.number_value=raw_token-'0';
     // printf("type=%d and value=%d\n",current_token.type,current_token.number_value);
-  }else{
+  }else if(is_operator(raw_token)){
     current_token.type=OPERATOR;
     current_token.operator_value=raw_token;
     // printf("type=%d and value=%c\n",current_token.type,current_token.operator_value);
+  }else{
+    printf("You are either giving a wrong numberical number or giving a wrong operator. Numbers between 0-9 are only valid where as in operators only + and - are valid");
+    exit(-1);
   }
   
 }

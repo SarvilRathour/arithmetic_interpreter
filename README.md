@@ -6,7 +6,7 @@ Interpreter is software that executes source code without first compiling it to 
 
 # Grammar
 Text->Number->Operator->Number->Operator...so on.
->This grammar tells the first value can't be operator and can only be a number.
+>this grammar tells that first should be a number followed by a operator and so on.
 
 **Parse**-This should check for the grammar, the syntax should be 0 1 2 3.. so on. Where even must be number and odd operator. 
 

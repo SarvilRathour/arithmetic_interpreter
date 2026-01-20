@@ -16,7 +16,7 @@ bool is_digit(char c){
 }
 void parse(int type){
     if(current_token.type!=type){
-      printf("Exected a integer got a operator");
+      printf("Exected a different value");
       exit(-1);
     }
 }
@@ -37,8 +37,10 @@ void interpreter(char *text){
   int length=strlen(text);
   for(int i=0;i<length-1;i++){//Here -1 is for \n given by fgets
     identifying_type(text[i]);//Here I need to identify wether the given char is a number or a operator
-    if (i==0){
-    parse(INTEGER);  
+    if(i%2==0){
+    parse(INTEGER);    
+    }else{
+      parse(OPERATOR);
     }
   }
 }

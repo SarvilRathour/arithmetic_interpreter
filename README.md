@@ -8,7 +8,7 @@ Interpreter is software that executes source code without first compiling it to 
 Text->Number->Operator->Number->Operator...so on.
 >This grammar tells the first value can't be operator and can only be a number.
 
-**Parse**-This function is only called when the *i* is zero, it check the current token type is zero or not. If zero continue and if not zero throw a error
+**Parse**-This should check for the grammar, the syntax should be 0 1 2 3.. so on. Where even must be number and odd operator. 
 
 ![Screenshot](images/image.png)
 
@@ -32,5 +32,7 @@ typedef struct {
   2. 1 represent an Character
 
 ![Screenshot](images/unnamed.png)
+
+
 
 

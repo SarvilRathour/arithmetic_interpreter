@@ -30,7 +30,16 @@ typedef struct {
 *type*- Type in token will be value 0 or 1. 
   1. 0 represent an Integer
   2. 1 represent an Character
-
+  
+**Logic**- I am making two arrays 
+```bash
+  int nums[MAX_CAPACITY]={6,7};//dummy values
+  char operators[MAX_CAPACITY]={'+'};//dummy values
+```
+After that values are read in this order
+```bash
+  6+7
+```
 ![Screenshot](images/unnamed.png)
 
 

@@ -31,7 +31,7 @@ typedef struct {
   1. 0 represent an Integer
   2. 1 represent an Character
   
-**Logic**- I am making two arrays 
+**Logic for calculation**- I am making two arrays 
 ```bash
   int nums[MAX_CAPACITY]={6,7};//dummy values
   char operators[MAX_CAPACITY]={'+'};//dummy values
@@ -40,6 +40,11 @@ After that values are read in this order
 ```bash
   6+7
 ```
+**Logic for taking numbers of multiple tenses**- I am modifying the array in a way 
+```bash
+ arr1=[5,5,+,5]->arr1=[55,+,5]
+``` 
+Creating a *modification* fuction for this
 ![Screenshot](images/unnamed.png)
 
 

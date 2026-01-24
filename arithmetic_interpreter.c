@@ -1,3 +1,4 @@
+#include <stddef.h>
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
@@ -33,6 +34,10 @@ void remove_whitespace(char *white_text){
   }
    white_text[count]='\0';
 }
+void merge_digits(char *alone_text){
+  size_t length=strlen(alone_text);
+  // printf_s("%d",length);
+}
 void identifying_type(char raw_token){
   if(is_digit(raw_token)){
     current_token.type=INTEGER;
@@ -55,6 +60,7 @@ int interpreter(char *text){
   int current_number_size=0;
   char operators[MAX_CAPACITY]={};
   int current_operator_size=0;
+  merge_digits(text);
   int length=strlen(text);
   for(int i=0;i<length-1;i++){//Here -1 is for \n given by fgets
     identifying_type(text[i]);//Here I need to identify wether the given char is a number or a operator
